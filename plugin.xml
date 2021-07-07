@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="com.sixdegrees.scanovate_colombia" version="0.0.1"
+    xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>scanovatec_colombia</name>
+    <js-module name="scanovatec_colombia" src="www/scanovatec_colombia.js">
+        <clobbers target="cordova.plugins.scanovatec_colombia" />
+    </js-module>
+    <platform name="android">
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="scanovatec_colombia">
+                <param name="android-package" value="com.sixdegrees.scanovate_colombia.scanovatec_colombia" />
+            </feature>
+        </config-file>
+        <config-file parent="/*" target="AndroidManifest.xml"></config-file>
+        <source-file src="src/android/scanovatec_colombia.java" target-dir="src/com/sixdegrees/scanovate_colombia/scanovatec_colombia" />
+		<resource-file src="libs/libScanovateImagingHybridLiveness_2_2_6.aar" target="../../libs/libScanovateImagingHybridLiveness_2_2_6.aar" />
+		<resource-file src="libs/scanovate_colombia_2_2_3.aar" target="../../libs/scanovate_colombia_2_2_3.aar" />
+		<resource-file src="libs/ScanovateManualCapture_1_0_7.aar" target="../../libs/ScanovateManualCapture_1_0_7.aar" />
+    </platform>
+</plugin>
