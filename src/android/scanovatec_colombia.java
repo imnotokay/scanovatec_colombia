@@ -11,8 +11,8 @@ import org.json.JSONObject;
 import mabel_tech.com.scanovate_demo.ScanovateHandler;
 import mabel_tech.com.scanovate_demo.ScanovateSdk;
 import mabel_tech.com.scanovate_demo.model.CloseResponse;
-import mabel_tech.com.scanovate_demo.network.ApiHelper;
-import mabel_tech.com.scanovate_demo.network.RetrofitClient;
+// import mabel_tech.com.scanovate_demo.network.ApiHelper;
+// import mabel_tech.com.scanovate_demo.network.RetrofitClient;
 
 /**
  * This class echoes a string called from JavaScript.
@@ -59,9 +59,9 @@ public class scanovatec_colombia extends CordovaPlugin {
                      @Override
                      public void onFailure(CloseResponse closeResponse) {
                          String calificacion = closeResponse.getExtras().getStateName() + " " + closeResponse.getExtras().getAdditionalProp1();
-                         context.error("Resultado de Transacción: " + calificacion)
+                         context.error("Resultado de Transacción: " + calificacion);
                      }
-                })
+                });
             }catch(Exception ex){
                 context.error("Se ha presentado un error al ejecutar la acción 'start', el detalle de la exepción a continuación: " + ex);
             }
@@ -71,22 +71,23 @@ public class scanovatec_colombia extends CordovaPlugin {
     }
 
     private void evaluateTransaction(String transactionId, CallbackContext context) {
-        RetrofitClient retrofitClient = new RetrofitClient();
-        retrofitClient.validateTransaction("avistaqa", transactionId, new ApiHelper.ValidateTransactionHandler() {
-            @Override
-            public void onSuccess(String stateName) {
-                context.success(stateName);
-            }
+        context.success("Prueba");
+        // RetrofitClient retrofitClient = new RetrofitClient();
+        // retrofitClient.validateTransaction("avistaqa", transactionId, new ApiHelper.ValidateTransactionHandler() {
+        //     @Override
+        //     public void onSuccess(String stateName) {
+        //         context.success(stateName);
+        //     }
 
-            @Override
-            public void onConnectionFailed() {
-                context.error("Resultado de Transacción: Se ha perdido la conexión al momento de consultar la transacción");
-            }
+        //     @Override
+        //     public void onConnectionFailed() {
+        //         context.error("Resultado de Transacción: Se ha perdido la conexión al momento de consultar la transacción");
+        //     }
 
-            @Override
-            public void onFailure(int i, String s) {
-                context.error("Resultado de Transacción: Algo fallo al momento de consultar la transaccion");
-            }
-        }, this);
+        //     @Override
+        //     public void onFailure(int i, String s) {
+        //         context.error("Resultado de Transacción: Algo fallo al momento de consultar la transaccion");
+        //     }
+        // }, this);
     }
 }
