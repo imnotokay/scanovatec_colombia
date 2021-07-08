@@ -50,7 +50,7 @@ public class scanovatec_colombia extends CordovaPlugin {
                 String param8 = args.getJSONObject(0).getString("param8");
                 String param9 = args.getJSONObject(0).getString("param9");
 
-                ScanovateSdk.start(this,
+                ScanovateSdk.start(this.cordova.getActivity().getApplicationContext(),
                 param1, param2, param3, param4, param5, param6, param7, param8, param9, new ScanovateHandler(){
                     public void onSuccess(CloseResponse response, int code, String uuidDevice) {
                         evaluateTransaction(response.getTransactionId(), context);
@@ -88,6 +88,6 @@ public class scanovatec_colombia extends CordovaPlugin {
             public void onFailure(int i, String s) {
                 context.error("Resultado de Transacción: Algo fallo al momento de consultar la transaccion");
             }
-        }, this);
+        }, this.cordova.getActivity().getApplicationContext());
     }
 }
