@@ -42,9 +42,9 @@ apply plugin: 'com.android.application'
             testImplementation 'junit:junit:4.12'
             androidTestImplementation 'com.android.support.test:runner:1.0.2'
             androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
-            implementation(name: 'scanovate_colombia', ext: 'aar')
-            implementation(name: 'ScanovateManualCapture_1_0_1', ext: 'aar')
-            implementation(name: 'libScanovateImagingHybridLiveness_4_1_0', ext: 'aar')
+            implementation(name: 'scanovate_colombia_2_2_3', ext: 'aar')
+            implementation(name: 'ScanovateManualCapture_1_0_7', ext: 'aar')
+            implementation(name: 'libScanovateImagingHybridLiveness_2_2_6', ext: 'aar')
             implementation 'com.google.android.gms:play-services-vision:17.0.2'
             implementation('io.socket:socket.io-client:1.0.0') {
             // excluding org.json which is provided by Android
