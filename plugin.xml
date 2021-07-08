@@ -9,13 +9,13 @@
     <platform name="android">
         <config-file parent="/*" target="res/xml/config.xml">
             <feature name="scanovatec_colombia">
-                <param name="android-package" value="com.sixdegrees.scanovate_colombia.scanovatec_colombia" />
+                <param name="android-package" value="com.sixdegrees.scanovate_colombia" />
             </feature>
         </config-file>
         <config-file parent="/*" target="AndroidManifest.xml"></config-file>
         <source-file src="src/android/scanovatec_colombia.java" target-dir="src/com/sixdegrees/scanovate_colombia/scanovatec_colombia" />
-		<resource-file src="libs/libScanovateImagingHybridLiveness_2_2_6.aar" target="../../libs/libScanovateImagingHybridLiveness_2_2_6.aar" />
-		<resource-file src="libs/scanovate_colombia_2_2_3.aar" target="../../libs/scanovate_colombia_2_2_3.aar" />
-		<resource-file src="libs/ScanovateManualCapture_1_0_7.aar" target="../../libs/ScanovateManualCapture_1_0_7.aar" />
+		<resource-file src="libs/libScanovateImagingHybridLiveness_2_2_6.aar" target="./libs/libScanovateImagingHybridLiveness_2_2_6.aar" />
+		<resource-file src="libs/scanovate_colombia_2_2_3.aar" target="./libs/scanovate_colombia_2_2_3.aar" />
+		<resource-file src="libs/ScanovateManualCapture_1_0_7.aar" target="./libs/ScanovateManualCapture_1_0_7.aar" />
     </platform>
 </plugin>
