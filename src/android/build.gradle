@@ -7,7 +7,7 @@ apply plugin: 'com.android.application'
             compileSdkVersion 28
             defaultConfig {
                 applicationId "com.mabel_tech.scanovate_colombia_sdk_demo"
-                minSdkVersion 19
+                minSdkVersion 21
                 targetSdkVersion 28
                 versionCode 1
                 versionName "1.0"
