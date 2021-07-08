@@ -1,15 +1,15 @@
 <?xml version='1.0' encoding='utf-8'?>
-<plugin id="com.sixdegrees.scanovate_colombia" version="0.0.1"
+<plugin id="com-sixdegrees-scanovate_colombia" version="0.0.1"
     xmlns="http://apache.org/cordova/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android">
     <name>scanovatec_colombia</name>
-    <js-module name="scanovatec_colombia" src="www/scanovatec_colombia.js">
+    <js-module name="scanovateccolombia" src="www/scanovatec_colombia.js">
         <clobbers target="cordova.plugins.MainActivity" />
     </js-module>
     <platform name="android">
         <config-file parent="/*" target="res/xml/config.xml">
-            <feature name="scanovatec_colombia">
-				<param name="android-package" value="com.sixdegrees.scanovate_colombia"/>
+            <feature name="scanovateccolombia">
+				<param name="android-package" value="com-sixdegrees-scanovatecolombia"/>
 			</feature>
         </config-file>
         <config-file parent="/*" target="AndroidManifest.xml">
