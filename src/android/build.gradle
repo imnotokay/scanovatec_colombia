@@ -30,7 +30,7 @@ apply plugin: 'com.android.application'
                     url 'http://maven.microblink.com'
                 }
                 flatDir {
-                    dirs 'libs'
+                    dirs 'src/main/libs'
                 }
             }
         }
