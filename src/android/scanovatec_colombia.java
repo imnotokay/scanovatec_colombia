@@ -11,8 +11,8 @@ import org.json.JSONObject;
 import mabel_tech.com.scanovate_demo.ScanovateHandler;
 import mabel_tech.com.scanovate_demo.ScanovateSdk;
 import mabel_tech.com.scanovate_demo.model.CloseResponse;
-// import mabel_tech.com.scanovate_demo.network.ApiHelper;
-// import mabel_tech.com.scanovate_demo.network.RetrofitClient;
+import mabel_tech.com.scanovate_demo.network.ApiHelper;
+import mabel_tech.com.scanovate_demo.network.RetrofitClient;
 
 /**
  * This class echoes a string called from JavaScript.
