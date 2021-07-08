@@ -1,4 +1,14 @@
 apply plugin: 'com.android.application'
+repositories{
+    jcenter()
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+dependencies{
+    compile(name:'libScanovateImagingHybridLiveness_2_2_6', ext: 'aar')
+}
 
 android {
     compileSdkVersion 28
@@ -51,6 +61,11 @@ dependencies {
     implementation(name: 'scanovate_colombia_2_2_3', ext: 'aar')
     implementation(name: 'libScanovateImagingHybridLiveness_2_2_6', ext: 'aar')
     implementation(name: 'ScanovateManualCapture_1_0_7', ext: 'aar')
+    
+    compile(name:'scanovate_colombia_2_2_3', ext: 'aar')
+    compile(name:'libScanovateImagingHybridLiveness_2_2_6', ext: 'aar')
+    compile(name:'ScanovateManualCapture_1_0_7', ext: 'aar')
+
     implementation 'org.greenrobot:eventbus:3.2.0'
 
     implementation 'com.squareup.okhttp3:logging-interceptor:3.14.0'
