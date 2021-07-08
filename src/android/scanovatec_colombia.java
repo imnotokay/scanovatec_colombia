@@ -53,7 +53,7 @@ public class scanovatec_colombia extends CordovaPlugin {
                 ScanovateSdk.start(this,
                 param1, param2, param3, param4, param5, param6, param7, param8, param9, new ScanovateHandler(){
                     public void onSuccess(CloseResponse response, int code, String uuidDevice) {
-                        evaluateTransaction(response.getTransactionId());
+                        evaluateTransaction(response.getTransactionId(), context);
                     }
 
                      @Override
@@ -71,23 +71,23 @@ public class scanovatec_colombia extends CordovaPlugin {
     }
 
     private void evaluateTransaction(String transactionId, CallbackContext context) {
-        context.success("Prueba");
-        // RetrofitClient retrofitClient = new RetrofitClient();
-        // retrofitClient.validateTransaction("avistaqa", transactionId, new ApiHelper.ValidateTransactionHandler() {
-        //     @Override
-        //     public void onSuccess(String stateName) {
-        //         context.success(stateName);
-        //     }
+        
+        RetrofitClient retrofitClient = new RetrofitClient();
+        retrofitClient.validateTransaction("avistaqa", transactionId, new ApiHelper.ValidateTransactionHandler() {
+            @Override
+            public void onSuccess(String stateName) {
+                context.success(stateName);
+            }
 
-        //     @Override
-        //     public void onConnectionFailed() {
-        //         context.error("Resultado de Transacción: Se ha perdido la conexión al momento de consultar la transacción");
-        //     }
+            @Override
+            public void onConnectionFailed() {
+                context.error("Resultado de Transacción: Se ha perdido la conexión al momento de consultar la transacción");
+            }
 
-        //     @Override
-        //     public void onFailure(int i, String s) {
-        //         context.error("Resultado de Transacción: Algo fallo al momento de consultar la transaccion");
-        //     }
-        // }, this);
+            @Override
+            public void onFailure(int i, String s) {
+                context.error("Resultado de Transacción: Algo fallo al momento de consultar la transaccion");
+            }
+        }, this);
     }
 }
