@@ -32,6 +32,4 @@ android {
 
 dependencies {
     compile(name:'scanovate_colombia_2_2_3', ext:'aar')
-    compile(name:'libScanovateImagingHybridLiveness_2_2_6', ext:'aar')
-    compile(name:'ScanovateManualCapture_1_0_7', ext:'aar')
 }
