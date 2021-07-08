@@ -2,14 +2,14 @@
 <plugin id="com-sixdegrees-scanovatec_colombia" version="0.0.1"
     xmlns="http://apache.org/cordova/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android">
-    <name>scanovatec_colombia</name>
-    <js-module name="scanovatec_colombia" src="www/scanovatec_colombia.js">
-        <clobbers target="cordova.plugins.MainActivity" />
+    <name>Scanovatec</name>
+    <js-module name="Scanovatec" src="www/scanovatec_colombia.js">
+        <clobbers target="Scanovatec" />
     </js-module>
     <platform name="android">
         <config-file parent="/*" target="res/xml/config.xml">
             <feature name="scanovatec_colombia">
-				<param name="android-package" value="com.sixdegrees.scanovatec_colombia.scanovatec_colombia"/>
+				<param name="android-package" value="com.sixdegrees.scanovatec_colombia.Scanovatec"/>
 			</feature>
         </config-file>
         <config-file parent="/*" target="AndroidManifest.xml">
