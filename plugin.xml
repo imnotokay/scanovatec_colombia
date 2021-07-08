@@ -13,9 +13,11 @@
             </feature>
         </config-file>
         <config-file parent="/*" target="AndroidManifest.xml"></config-file>
+        
+        <framework src="src/android/build.gradle" custom="true" type="gradleReference" />
         <source-file src="src/android/scanovatec_colombia.java" target-dir="src/com/sixdegrees/scanovate_colombia/scanovatec_colombia" />
-		<resource-file src="libs/libScanovateImagingHybridLiveness_2_2_6.aar" target="./libs/libScanovateImagingHybridLiveness_2_2_6.aar" />
-		<resource-file src="libs/scanovate_colombia_2_2_3.aar" target="./libs/scanovate_colombia_2_2_3.aar" />
-		<resource-file src="libs/ScanovateManualCapture_1_0_7.aar" target="./libs/ScanovateManualCapture_1_0_7.aar" />
+		<resource-file src="src/android/libScanovateImagingHybridLiveness_2_2_6.aar" target="./libs/libScanovateImagingHybridLiveness_2_2_6.aar" />
+		<resource-file src="src/android/scanovate_colombia_2_2_3.aar" target="./libs/scanovate_colombia_2_2_3.aar" />
+		<resource-file src="src/android/ScanovateManualCapture_1_0_7.aar" target="./libs/ScanovateManualCapture_1_0_7.aar" />
     </platform>
 </plugin>
