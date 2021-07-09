@@ -50,6 +50,7 @@ public class scanovatec_colombia extends CordovaPlugin {
                 String param8 = args.getJSONObject(0).getString("param8");
                 String param9 = args.getJSONObject(0).getString("param9");
 
+                context.success("response.getTransactionId()");
                 ScanovateSdk.start(this.cordova.getActivity(),
                 param1, param2, param3, param4, param5, param6, param7, param8, param9, new ScanovateHandler(){
                     public void onSuccess(CloseResponse response, int code, String uuidDevice) {
